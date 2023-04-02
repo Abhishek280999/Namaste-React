@@ -13,7 +13,11 @@ const heading = React.createElement(
 
     //JSX - HTML - like  OR XML - like syntax
 
-const jsxheading = <h1 id="heading">Namaste React Using JSX</h1>;
+    // JSX - => React.createElement => React.createElement - Object  =>  HTMLElement(render)
+
+const jsxheading =( <h1 id="heading" className="root">
+Namaste React Using JSX
+</h1>)
 console.log(jsxheading);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
