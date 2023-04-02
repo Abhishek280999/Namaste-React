@@ -4,24 +4,32 @@ import ReactDOM from "react-dom/client";
 //React elements
 //React.createElement => Object => HTMLElement(render)
 
-const heading = React.createElement(
-    "h1",
-    { id: 'heading'},
-    "Namaste React"
-    );
-    console.log(heading);
+const Title =()=>(
+    <h1 id="heading" className="root">
+  Namaste React Using JSX
+  </h1>)
 
-    //JSX - HTML - like  OR XML - like syntax
+//React components - 2 types 
+ // Functional component  -- NEW way
+ // Class based component  -- OLD way
 
-    // JSX - => React.createElement => React.createElement - Object  =>  HTMLElement(render)
+ // Functional component  -- NEW way
 
-const jsxheading =( <h1 id="heading" className="root">
-Namaste React Using JSX
-</h1>)
-console.log(jsxheading);
+//  const HeadingComponent = () => <h1>Namaste React Using Functional component</h1>
+
+            //OR 
+ const HeadingComponent = () =>(
+    <div id="container">
+    <Title/>    
+        <h1 id="heading">Namaste React Using Functional component</h1>
+    </div>
+ )
+
+    
+
+ // <HeadingComponent/>
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(jsxheading);
-
+root.render(<HeadingComponent />);  
 
