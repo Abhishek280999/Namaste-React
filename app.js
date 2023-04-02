@@ -11,11 +11,13 @@ const heading = React.createElement(
     );
     console.log(heading);
 
-    //JSX - i not HTML in JS
+    //JSX - HTML - like  OR XML - like syntax
 
-const jsxheading = <h1>Namaste React Using JSX</h1>;
+const jsxheading = <h1 id="heading">Namaste React Using JSX</h1>;
+console.log(jsxheading);
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(heading);
+root.render(jsxheading);
 
 
