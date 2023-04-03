@@ -27,7 +27,7 @@ const Title = () =>(
    //REact Fragment - behavior like an emety
  const HeadingComponent = () =>(
    <React.Fragment>
-    /* <>   */
+  
     <div id="container">
     {Title()}
     <Title></Title>    
@@ -36,7 +36,7 @@ const Title = () =>(
     <div id="container">   
         <h1 id="heading">Namaste React Using Functional component</h1>
     </div>
-     /* </>   */
+ 
     </React.Fragment>
  )   
 
