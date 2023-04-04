@@ -14,7 +14,7 @@ Body
 Footer
 - Copyright
 - links
-- contact
+- contacts
 
 */
 const Header = ()=>{
