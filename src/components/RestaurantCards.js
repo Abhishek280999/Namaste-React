@@ -1,9 +1,9 @@
+import { useEffect } from "react";
 import { CDN_URL } from "../utils/constants";
-
-
 const RestaurantCards = (props)=>{
+  // console.log('hi')
     const {resData} = props
-    
+    console.log(resData)
     const {cloudinaryImageId,
       name,
       cuisines,
@@ -11,6 +11,9 @@ const RestaurantCards = (props)=>{
       costForTwo,
       deliveryTime
     } = resData?.data
+    // useEffect(()=>{
+
+    // },[props])
   return(
     <div className="res-Card">
     <img className="res-log" alt="res-logo" src={CDN_URL
