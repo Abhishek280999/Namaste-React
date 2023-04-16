@@ -1,12 +1,7 @@
 import { useState } from "react";
 import { LOGO_URL } from "../utils/constants";
 import Logo from "../assets/img/food.png";
-
-const loggedInUser = () => {
-  // Api call to check authentication
-
-  return true;
-};
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -17,18 +12,31 @@ const Header = () => {
       </div>
       <div className="nav-item">
         <ul>
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Contact Us</li>
-          <li>Cart</li>
+          <Link to="/">
+            <li>Home</li>
+          </Link>
+          <Link to="/about">
+            <li>About Us</li>
+          </Link>
+          <Link to="/contact
+          ">
+            <li>Contact Us</li>
+          </Link>
+          <Link to="/">
+            <li>Cart</li>
+          </Link>
         </ul>
       </div>
 
       {/* /* conditional rendering */}
       {isLoggedIn ? (
-        <button onClick={() => setIsLoggedIn(false)}>Logout</button>
+        <button className="btn" onClick={() => setIsLoggedIn(false)}>
+          Logout
+        </button>
       ) : (
-        <button onClick={() => setIsLoggedIn(true)}>Login</button>
+        <button className="btn" onClick={() => setIsLoggedIn(true)}>
+          Login
+        </button>
       )}
     </div>
   );

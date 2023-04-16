@@ -1,7 +1,20 @@
 .header {
+  background-color: #90ee90;
   border: 1px solid #000;
   justify-content: space-between;
+  align-items: center;
   display: flex;
+}
+
+.search-input {
+  width: 200px;
+  height: 25px;
+}
+
+.input-btn {
+  width: 70px;
+  height: 28px;
+  background-color: red;
 }
 
 .logo {
@@ -15,10 +28,14 @@
 }
 
 .nav-item {
-  padding: 0 20px;
+  margin-left: 400px;
 }
 
-.nav-item > ul > li {
+.nav-item > ul > a {
+  text-decoration: none;
+}
+
+.nav-item > ul > a > li {
   margin: 10px;
   padding: 10px;
   list-style: none;
@@ -33,6 +50,7 @@
   background-color: #f0f0f0;
   margin: 5px;
   padding: 5px;
+  box-shadow: 0 5px 15px #00000059;
 }
 
 .res-Card:hover {
@@ -46,12 +64,24 @@
 
 .res-Container {
   flex-wrap: wrap;
+  margin-top: 30px;
   display: flex;
 }
 
 .filter-btn {
   cursor: pointer;
   margin: 10px;
+}
+
+.shimmer-card {
+  width: 190px;
+  height: 200px;
+  background-color: #d3d3d3;
+  margin: 10px;
+}
+
+.btn {
+  margin-right: 120px;
 }
 
 /*# sourceMappingURL=index.9e4c6fd2.css.map */

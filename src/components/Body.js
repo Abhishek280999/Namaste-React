@@ -53,7 +53,7 @@ const Body = () => {
             setsearchText(e.target.value);
           }}
         />
-        <button
+        <button className="input-btn"
           onClick={() => {
             //need to filter the data
             const data = filterdata(searchText, listofRestaurant);
