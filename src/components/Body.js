@@ -2,7 +2,7 @@ import resList from "../utils/mockData";
 import RestaurantCards from "./RestaurantCards";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
-
+let allrestaurants
 function filterdata(searchText, listofRestaurant) {
   const filterdata = listofRestaurant.filter((listofRestaurant) =>
     listofRestaurant?.data?.name?.toLowerCase()?.includes(searchText.toLowerCase())
@@ -20,6 +20,7 @@ function sortList(value, list) {
 const Body = () => {
   const [searchText, setsearchText] = useState();
   const [listofRestaurant, setlistofRestaurant] = useState([]);
+  const [Restaurant, setRestaurant] = useState(allrestaurants);
   const [filterlistofRestaurant, setfilterlistofRestaurant] = useState([]);
   
   useEffect(() => {
@@ -34,7 +35,7 @@ const Body = () => {
     const json = await data.json();
     // console.log(json);
     //Optional Chaining  -> ?
-    let allrestaurants = json?.data?.cards[2]?.data?.data?.cards;
+     allrestaurants = json?.data?.cards[2]?.data?.data?.cards;
     setlistofRestaurant(allrestaurants);
     setfilterlistofRestaurant(allrestaurants);
 
@@ -84,7 +85,8 @@ const Body = () => {
       <div>
         <select
           onChange={(e) => {
-            setSortState(e.target.value);
+           let ans=  sortList(e.target.value ,allrestaurants)
+            setRestaurant(ans);
           }}
         >
           <option value="null">sorting</option>
