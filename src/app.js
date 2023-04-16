@@ -16,7 +16,7 @@ const AppLayout = ()=>{
   <Header/>
   {/* outlet */}
   <Outlet/>
-  {/* <Footer/> */}
+  <Footer/>
   </>
   );
 }
@@ -27,12 +27,16 @@ const appRouter = createBrowserRouter([
     errorElement: <Error/>,
     children : [
       {
+        path: "/",
+        element: <Body/>,
+      },
+      {
         path: "/about",
         element: <About/>,
       },
       {
         path: "/contact",
-        element: <About/>,
+        element: <Contact/>,
       },
     ],
   },
